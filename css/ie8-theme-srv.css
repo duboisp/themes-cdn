@@ -6307,7 +6307,45 @@ mark {
 .position-relative {
   position: relative !important; }
 
+/*
+  WET-BOEW
+  @title: Bootstrap IE8-specific overrides for WET-BOEW
+ */
+.lt-ie9 .pagination > li:first-child [rel="prev"]:before,
+.lt-ie9 .pager > li:first-child [rel="prev"]:before {
+  content: none;
+  margin-right: -1px; }
+
+.lt-ie9 .dl-horizontal dt {
+  white-space: normal; }
+
+/* Print view */
+@media print {
+  /*
+  WET-BOEW
+  @title: Bootstrap IE8-specific print overrides for WET-BOEW
+ */
+  .lt-ie9 abbr[title]:after {
+    content: ""; }
+  .lt-ie9 .pagination,
+  .lt-ie9 .pager {
+    width: 100%; }
+    .lt-ie9 .pagination > li > a,
+    .lt-ie9 .pagination > li > span,
+    .lt-ie9 .pager > li > a,
+    .lt-ie9 .pager > li > span {
+      cursor: hand; }
+    .lt-ie9 .pagination > li.active > a,
+    .lt-ie9 .pagination > li.active > span,
+    .lt-ie9 .pager > li.active > a,
+    .lt-ie9 .pager > li.active > span {
+      cursor: default; } }
+
 /* WET Core */
+/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ */
 /*
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
@@ -8765,7 +8803,7 @@ ol.linenums {
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licence-fra.html
  */
-table.dataTable, .dataTables_wrapper .dataTables_scroll {
+table.dataTable, .dataTables_wrapper .dataTables_scroll, .lt-ie9 .dataTables_wrapper .dataTables_scroll {
   clear: both; }
 
 table.dataTable thead th:active, table.dataTable thead td:active {
@@ -10634,6 +10672,124 @@ details {
       max-height: none; }
   .wb-tabs > .tabpanels {
     overflow: visible !important; } }
+
+/*! WET-BOEW Core and Plugins */
+/*
+  WET-BOEW
+  @title: IE8-specific details/summary CSS
+ */
+.lt-ie9 details {
+  padding-left: 1.1em; }
+  .lt-ie9 details > summary {
+    margin-left: -1.1em; }
+
+.lt-ie9 [dir=rtl] details {
+  padding-left: 0;
+  padding-right: 1.1em; }
+  .lt-ie9 [dir=rtl] details > summary {
+    margin-left: 0 !important;
+    margin-right: -1.1em; }
+
+/*
+ Plugins
+ */
+/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licence-fra.html
+*/
+.lt-ie9 .olControlZoom a:hover, .lt-ie9 .olControlZoom a:focus {
+  background: #130085; }
+
+/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licence-fra.html
+*/
+.lt-ie9 .mfp-close {
+  cursor: hand !important; }
+
+/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ */
+/*
+ *	Overlay base
+ */
+.lt-ie9 .wb-panel-r, .lt-ie9[dir=rtl] .wb-panel-l {
+  border-left: 1px solid #999; }
+
+.lt-ie9 .wb-panel-l, .lt-ie9[dir=rtl] .wb-panel-r {
+  border-right: 1px solid #999; }
+
+.lt-ie9 .wb-bar-t {
+  border-bottom: 1px solid #999; }
+
+.lt-ie9 .wb-bar-b {
+  border-top: 1px solid #999; }
+
+.lt-ie9[dir=rtl] .wb-panel-l {
+  border-right: 0; }
+
+.lt-ie9[dir=rtl] .wb-panel-r {
+  border-left: 0; }
+
+/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licence-fra.html
+*/
+.lt-ie9 table.dataTable thead .sorting-icons, .lt-ie9 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:before, .lt-ie9 .dataTables_wrapper .dataTables_paginate .paginate_button.next:after, .lt-ie9[dir=rtl] .dataTables_wrapper .dataTables_paginate .paginate_button.previous:after, .lt-ie9[dir=rtl] .dataTables_wrapper .dataTables_paginate .paginate_button.next:before {
+  font-family: "Glyphicons Halflings"; }
+
+.lt-ie9 table.dataTable thead .sorting,
+.lt-ie9 table.dataTable thead .sorting_asc,
+.lt-ie9 table.dataTable thead .sorting_desc {
+  cursor: hand; }
+
+.lt-ie9 .dataTables_wrapper {
+  zoom: 1; }
+  .lt-ie9 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    cursor: hand; }
+    .lt-ie9 .dataTables_wrapper .dataTables_paginate .paginate_button.next:after {
+      content: "\e092";
+      margin-left: .5em; }
+  .lt-ie9 .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
+    margin-top: -1px; }
+
+.lt-ie9[dir=rtl] .dataTables_wrapper .dataTables_paginate .paginate_button {
+  cursor: hand; }
+  .lt-ie9[dir=rtl] .dataTables_wrapper .dataTables_paginate .paginate_button.previous:after {
+    content: "\e092";
+    margin-left: .5em; }
+
+/*
+ Polyfills
+ */
+/*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ */
+.lt-ie9 details {
+  visibility: hidden; }
+  .lt-ie9 details > details,
+  .lt-ie9 details > * {
+    display: none; }
+  .lt-ie9 details[open] {
+    visibility: visible; }
+    .lt-ie9 details[open] > details,
+    .lt-ie9 details[open] > * {
+      display: block !important; }
+  .lt-ie9 details.alert {
+    visibility: visible; }
+
+/* Print view */
+@media print {
+  /*
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ */
+  .lt-ie9 .wb-fnote dd, .lt-ie9 .wb-fnote .fn-rtn {
+    display: block; }
+  .lt-ie9 .wb-fnote p {
+    display: inline-block; } }
 
 /*
  Views
